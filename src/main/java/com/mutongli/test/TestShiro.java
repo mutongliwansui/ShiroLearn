@@ -1,4 +1,4 @@
-package com.shiro.test;
+package com.mutongli.test;
 
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
@@ -15,14 +15,14 @@ public class TestShiro {
 	@Test
 	public void testhelloWorld(){
 		//1、获取SecurityManager工厂，此处使用Ini配置文件初始化SecurityManager
-	    Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
+	    Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
 //	    Factory<SecurityManager> factory2 = 
 	    //2、得到SecurityManager实例 并绑定给SecurityUtils 
 	    SecurityManager securityManager = factory.getInstance();
 	    SecurityUtils.setSecurityManager(securityManager);
 	    //3、得到Subject及创建用户名/密码身份验证Token（即用户身份/凭证）  
 	    Subject subject = SecurityUtils.getSubject();  
-	    UsernamePasswordToken token = new UsernamePasswordToken("zhang", "123");  
+	    UsernamePasswordToken token = new UsernamePasswordToken("zhang123", "1234");
 	    try {  
 	        //4、登录，即身份验证  
 	        subject.login(token);  
