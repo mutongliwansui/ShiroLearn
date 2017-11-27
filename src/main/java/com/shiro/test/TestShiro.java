@@ -32,7 +32,7 @@ public class TestShiro {
 	    }
 //	    Assert.assertEquals(true, subject.isAuthenticated()); //断言用户已经登录  
 	    boolean result = subject.isAuthenticated();
-	    LOGGER.info(result);
+	    LOGGER.info("登录结果:"+result);
 	    //6、退出  
 	    subject.logout();  
 	}
