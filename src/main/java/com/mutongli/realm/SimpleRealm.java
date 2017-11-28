@@ -8,6 +8,7 @@ import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.realm.Realm;
+import org.apache.shiro.realm.jdbc.JdbcRealm;
 
 public class SimpleRealm implements Realm {
 	private static final String REALMNAME = "simplereleam"; // realm唯一名
